@@ -4,6 +4,7 @@
  */
 package com.mycompany.javaatlas;
 
+import com.mycompany.javaatlas.Views.*;
 /**
  *
  * @author user
@@ -29,6 +30,7 @@ public class MainForm extends javax.swing.JFrame {
 
         background = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
+        GeneralInformation = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,13 +43,26 @@ public class MainForm extends javax.swing.JFrame {
         title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title.setText("ЕЛЕКТРОННИЙ АТЛAС СВІТУ");
 
+        GeneralInformation.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        GeneralInformation.setText("Основні відомості");
+        GeneralInformation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GeneralInformationActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(126, 126, 126)
-                .addComponent(title)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(126, 126, 126)
+                        .addComponent(title))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(GeneralInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(148, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -60,7 +75,9 @@ public class MainForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(116, 116, 116)
                 .addComponent(title)
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(GeneralInformation)
+                .addContainerGap(283, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -70,6 +87,13 @@ public class MainForm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void GeneralInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GeneralInformationActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        GeneralInformationView generalInformation = new GeneralInformationView();
+        generalInformation.setVisible(true);
+    }//GEN-LAST:event_GeneralInformationActionPerformed
 
     /**
      * @param args the command line arguments
@@ -107,6 +131,7 @@ public class MainForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton GeneralInformation;
     private javax.swing.JLabel background;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
