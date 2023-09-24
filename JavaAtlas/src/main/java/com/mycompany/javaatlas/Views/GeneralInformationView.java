@@ -34,6 +34,7 @@ public class GeneralInformationView extends javax.swing.JFrame {
         icon = new javax.swing.JLabel();
         back = new javax.swing.JButton();
         physicalSurfaceOfTheEarth = new javax.swing.JButton();
+        shapeAndDimensionsOfTheEarth = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,6 +60,14 @@ public class GeneralInformationView extends javax.swing.JFrame {
             }
         });
 
+        shapeAndDimensionsOfTheEarth.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        shapeAndDimensionsOfTheEarth.setText("Форма і розміри Землі");
+        shapeAndDimensionsOfTheEarth.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                shapeAndDimensionsOfTheEarthActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -67,8 +76,6 @@ public class GeneralInformationView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(icon, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
                         .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(130, 130, 130)
@@ -78,6 +85,12 @@ public class GeneralInformationView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(physicalSurfaceOfTheEarth, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(shapeAndDimensionsOfTheEarth, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(127, 127, 127)
+                .addComponent(icon, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -86,16 +99,14 @@ public class GeneralInformationView extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(title)
                 .addGap(18, 18, 18)
-                .addComponent(physicalSurfaceOfTheEarth)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(icon, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(26, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(back)
-                        .addContainerGap())))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(physicalSurfaceOfTheEarth)
+                    .addComponent(shapeAndDimensionsOfTheEarth))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addComponent(icon, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(9, 9, 9)
+                .addComponent(back)
+                .addContainerGap())
         );
 
         pack();
@@ -114,6 +125,13 @@ public class GeneralInformationView extends javax.swing.JFrame {
         var physicalSurfaceOfTheEarth = new PhysicalSurfaceOfTheEarthView();
         physicalSurfaceOfTheEarth.setVisible(true);
     }//GEN-LAST:event_physicalSurfaceOfTheEarthActionPerformed
+
+    private void shapeAndDimensionsOfTheEarthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shapeAndDimensionsOfTheEarthActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        var shapeAndDimensionsOfTheEarth=new ShapeAndDimensionsOfTheEarthView();
+        shapeAndDimensionsOfTheEarth.setVisible(true);
+    }//GEN-LAST:event_shapeAndDimensionsOfTheEarthActionPerformed
 
     /**
      * @param args the command line arguments
@@ -154,6 +172,7 @@ public class GeneralInformationView extends javax.swing.JFrame {
     private javax.swing.JButton back;
     private javax.swing.JLabel icon;
     private javax.swing.JButton physicalSurfaceOfTheEarth;
+    private javax.swing.JButton shapeAndDimensionsOfTheEarth;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }
