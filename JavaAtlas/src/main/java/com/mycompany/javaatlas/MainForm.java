@@ -10,7 +10,14 @@ import com.mycompany.javaatlas.Views.*;
  * @author user
  */
 public class MainForm extends javax.swing.JFrame {
-    private String address = "D:/Projects/JavaProjects/JavaAtlas/Sources/";
+    private String _address = "D:/Projects/JavaProjects/JavaAtlas/Sources/";
+    
+    public String setAddress() {
+        return _address;
+    }
+    public String getAddress() {
+        return _address;
+    }
     
     /**
      * Creates new form MainForm
@@ -36,7 +43,7 @@ public class MainForm extends javax.swing.JFrame {
 
         background.setBackground(new java.awt.Color(0, 204, 0));
         background.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        background.setIcon(new javax.swing.ImageIcon(address+"Images/MainFormBackground.jpg"));
+        background.setIcon(new javax.swing.ImageIcon(_address + "Images/MainFormBackground.jpg"));
 
         title.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         title.setForeground(new java.awt.Color(255, 255, 255));
