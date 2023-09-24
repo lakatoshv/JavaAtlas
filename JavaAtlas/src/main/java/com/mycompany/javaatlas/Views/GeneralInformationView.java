@@ -5,6 +5,7 @@
 package com.mycompany.javaatlas.Views;
 
 import com.mycompany.javaatlas.MainForm;
+import com.mycompany.javaatlas.Views.GeneralInformationAboutEarth.*;
 
 /**
  *
@@ -12,12 +13,11 @@ import com.mycompany.javaatlas.MainForm;
  */
 public class GeneralInformationView extends javax.swing.JFrame {
     private String _address;
-    private MainForm _mainForm = new MainForm();
     /**
      * Creates new form GeneralInformationView
      */
     public GeneralInformationView() {
-        _address = _mainForm.getAddress();
+        _address = new MainForm().getAddress();
         initComponents();
     }
 
@@ -33,6 +33,7 @@ public class GeneralInformationView extends javax.swing.JFrame {
         title = new javax.swing.JLabel();
         icon = new javax.swing.JLabel();
         back = new javax.swing.JButton();
+        physicalSurfaceOfTheEarth = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,6 +48,14 @@ public class GeneralInformationView extends javax.swing.JFrame {
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
+            }
+        });
+
+        physicalSurfaceOfTheEarth.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        physicalSurfaceOfTheEarth.setText("Фізична поверхня Землі");
+        physicalSurfaceOfTheEarth.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                physicalSurfaceOfTheEarthActionPerformed(evt);
             }
         });
 
@@ -66,19 +75,25 @@ public class GeneralInformationView extends javax.swing.JFrame {
                         .addComponent(title)
                         .addGap(0, 100, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(physicalSurfaceOfTheEarth, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(title)
+                .addGap(18, 18, 18)
+                .addComponent(physicalSurfaceOfTheEarth)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(102, 102, 102)
+                        .addGap(60, 60, 60)
                         .addComponent(icon, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(26, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 267, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(back)
                         .addContainerGap())))
         );
@@ -92,6 +107,13 @@ public class GeneralInformationView extends javax.swing.JFrame {
         MainForm mainForm = new MainForm();
         mainForm.setVisible(true);
     }//GEN-LAST:event_backActionPerformed
+
+    private void physicalSurfaceOfTheEarthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_physicalSurfaceOfTheEarthActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        var physicalSurfaceOfTheEarth = new PhysicalSurfaceOfTheEarthView();
+        physicalSurfaceOfTheEarth.setVisible(true);
+    }//GEN-LAST:event_physicalSurfaceOfTheEarthActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,6 +153,7 @@ public class GeneralInformationView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back;
     private javax.swing.JLabel icon;
+    private javax.swing.JButton physicalSurfaceOfTheEarth;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

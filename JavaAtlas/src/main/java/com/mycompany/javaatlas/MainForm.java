@@ -98,7 +98,7 @@ public class MainForm extends javax.swing.JFrame {
     private void GeneralInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GeneralInformationActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        GeneralInformationView generalInformation = new GeneralInformationView();
+        var generalInformation = new GeneralInformationView();
         generalInformation.setVisible(true);
     }//GEN-LAST:event_GeneralInformationActionPerformed
 
