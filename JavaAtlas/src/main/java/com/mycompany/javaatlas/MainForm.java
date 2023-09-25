@@ -37,7 +37,8 @@ public class MainForm extends javax.swing.JFrame {
 
         background = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
-        GeneralInformation = new javax.swing.JButton();
+        earthHistory = new javax.swing.JButton();
+        generalInformation = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,11 +51,19 @@ public class MainForm extends javax.swing.JFrame {
         title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title.setText("ЕЛЕКТРОННИЙ АТЛAС СВІТУ");
 
-        GeneralInformation.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        GeneralInformation.setText("Основні відомості");
-        GeneralInformation.addActionListener(new java.awt.event.ActionListener() {
+        earthHistory.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        earthHistory.setText("Історія Землі");
+        earthHistory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GeneralInformationActionPerformed(evt);
+                earthHistoryActionPerformed(evt);
+            }
+        });
+
+        generalInformation.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        generalInformation.setText("Основні відомості");
+        generalInformation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generalInformationActionPerformed(evt);
             }
         });
 
@@ -68,9 +77,11 @@ public class MainForm extends javax.swing.JFrame {
                         .addGap(126, 126, 126)
                         .addComponent(title))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(GeneralInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(148, Short.MAX_VALUE))
+                        .addGap(20, 20, 20)
+                        .addComponent(generalInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(160, 160, 160)
+                        .addComponent(earthHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(20, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -82,9 +93,11 @@ public class MainForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(116, 116, 116)
                 .addComponent(title)
-                .addGap(18, 18, 18)
-                .addComponent(GeneralInformation)
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(generalInformation)
+                    .addComponent(earthHistory))
+                .addContainerGap(295, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -95,12 +108,19 @@ public class MainForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void GeneralInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GeneralInformationActionPerformed
+    private void earthHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_earthHistoryActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        var earthHistory = new EarthHistoryView();
+        earthHistory.setVisible(true);
+    }//GEN-LAST:event_earthHistoryActionPerformed
+
+    private void generalInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generalInformationActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
         var generalInformation = new GeneralInformationView();
         generalInformation.setVisible(true);
-    }//GEN-LAST:event_GeneralInformationActionPerformed
+    }//GEN-LAST:event_generalInformationActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,8 +158,9 @@ public class MainForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton GeneralInformation;
     private javax.swing.JLabel background;
+    private javax.swing.JButton earthHistory;
+    private javax.swing.JButton generalInformation;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }
