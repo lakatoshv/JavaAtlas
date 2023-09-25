@@ -36,10 +36,10 @@ public class PhysicalSurfaceOfTheEarthView extends javax.swing.JFrame {
         title = new javax.swing.JLabel();
         icon1 = new javax.swing.JLabel();
         icon2 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        horisontalScroll = new javax.swing.JScrollPane();
         content = new javax.swing.JTextArea();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jButton4 = new javax.swing.JButton();
+        verticalScroll = new javax.swing.JScrollPane();
+        back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,17 +54,17 @@ public class PhysicalSurfaceOfTheEarthView extends javax.swing.JFrame {
         content.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         content.append(_fileReaderService.getFile(_address + "Resources/PhysicalSurface.txt"));
         content.setRows(5);
-        jScrollPane2.setViewportView(content);
+        horisontalScroll.setViewportView(content);
 
-        jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane3.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        verticalScroll.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        verticalScroll.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
-        jButton4.setBackground(new java.awt.Color(204, 0, 0));
-        jButton4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jButton4.setText("Назад");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        back.setBackground(new java.awt.Color(204, 0, 0));
+        back.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        back.setText("Назад");
+        back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                backActionPerformed(evt);
             }
         });
 
@@ -78,7 +78,7 @@ public class PhysicalSurfaceOfTheEarthView extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(279, 279, 279)
                                 .addComponent(icon2)
@@ -94,13 +94,13 @@ public class PhysicalSurfaceOfTheEarthView extends javax.swing.JFrame {
                         .addGap(226, 226, 226))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 884, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(horisontalScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 884, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(verticalScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3)
+            .addComponent(verticalScroll)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(title)
@@ -109,21 +109,21 @@ public class PhysicalSurfaceOfTheEarthView extends javax.swing.JFrame {
                     .addComponent(icon2)
                     .addComponent(icon1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(horisontalScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
+                .addComponent(back)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
         var generalInformation = new GeneralInformationView();
         generalInformation.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_backActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,12 +161,12 @@ public class PhysicalSurfaceOfTheEarthView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton back;
     private javax.swing.JTextArea content;
+    private javax.swing.JScrollPane horisontalScroll;
     private javax.swing.JLabel icon1;
     private javax.swing.JLabel icon2;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel title;
+    private javax.swing.JScrollPane verticalScroll;
     // End of variables declaration//GEN-END:variables
 }
