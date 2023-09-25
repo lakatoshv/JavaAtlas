@@ -39,6 +39,7 @@ public class MainForm extends javax.swing.JFrame {
         title = new javax.swing.JLabel();
         earthHistory = new javax.swing.JButton();
         generalInformation = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,6 +68,14 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
+        jButton7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jButton7.setText("Географічний атлас");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -78,9 +87,12 @@ public class MainForm extends javax.swing.JFrame {
                         .addComponent(title))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(generalInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(160, 160, 160)
-                        .addComponent(earthHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(generalInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(160, 160, 160)
+                                .addComponent(earthHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(20, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -97,7 +109,9 @@ public class MainForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(generalInformation)
                     .addComponent(earthHistory))
-                .addContainerGap(295, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(jButton7)
+                .addContainerGap(245, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -121,6 +135,13 @@ public class MainForm extends javax.swing.JFrame {
         var generalInformation = new GeneralInformationView();
         generalInformation.setVisible(true);
     }//GEN-LAST:event_generalInformationActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        var geographicalAtlas = new GeographicalAtlasView();
+        geographicalAtlas.setVisible(true);
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,6 +182,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JLabel background;
     private javax.swing.JButton earthHistory;
     private javax.swing.JButton generalInformation;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }
