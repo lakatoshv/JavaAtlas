@@ -187,6 +187,10 @@ public class Oceans extends javax.swing.JFrame {
 
     private void indianOceanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_indianOceanActionPerformed
         // TODO add your handling code here:
+        content.append(_fileReaderService.getFile(_address + "Resources/Oceans/indianOcean.txt"));
+        oceanName.setText("Індійський океан");
+        icon1.setIcon(new javax.swing.ImageIcon(_address + "Images/Oceans/indianOcean1.jpg"));
+        icon2.setIcon(new javax.swing.ImageIcon(_address + "Images/Oceans/indianOcean2.jpg"));
     }//GEN-LAST:event_indianOceanActionPerformed
 
     private void arcticOceanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arcticOceanActionPerformed
