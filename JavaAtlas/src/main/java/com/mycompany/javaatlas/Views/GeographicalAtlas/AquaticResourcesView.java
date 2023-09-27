@@ -32,6 +32,7 @@ public class AquaticResourcesView extends javax.swing.JFrame {
         title = new javax.swing.JLabel();
         oceans = new javax.swing.JButton();
         back = new javax.swing.JButton();
+        rivers = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,6 +59,14 @@ public class AquaticResourcesView extends javax.swing.JFrame {
 
         
 
+        rivers.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        rivers.setText("Річки");
+        rivers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                riversActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -70,6 +79,12 @@ public class AquaticResourcesView extends javax.swing.JFrame {
                         .addGap(53, 53, 53)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(oceans, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(44, 44, 44)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(rivers, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            
                 .addContainerGap(33, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -84,6 +99,8 @@ public class AquaticResourcesView extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(oceans)
+                    .addComponent(rivers))
+                
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -99,7 +116,7 @@ public class AquaticResourcesView extends javax.swing.JFrame {
         oceans.setVisible(true);
     }//GEN-LAST:event_oceansActionPerformed
 
-   
+    
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         // TODO add your handling code here:
@@ -107,6 +124,15 @@ public class AquaticResourcesView extends javax.swing.JFrame {
         var geographicalAtlas = new GeographicalAtlasView();
         geographicalAtlas.setVisible(true);
     }//GEN-LAST:event_backActionPerformed
+
+    
+
+    private void riversActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riversActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        var rivers = new RiversView();
+        rivers.setVisible(true);
+    }//GEN-LAST:event_riversActionPerformed
 
     /**
      * @param args the command line arguments
