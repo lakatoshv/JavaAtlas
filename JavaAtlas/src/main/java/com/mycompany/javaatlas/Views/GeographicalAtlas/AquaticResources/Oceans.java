@@ -13,11 +13,14 @@ import com.mycompany.javaatlas.Views.GeographicalAtlas.AquaticResourcesView;
  * @author user
  */
 public class Oceans extends javax.swing.JFrame {
+    private String _address;
+    private FileReaderService _fileReaderService = new FileReaderService();
     
     /**
      * Creates new form Oceans
      */
     public Oceans() {
+        _address = new MainForm().getAddress();
         initComponents();
         oceanName.setText("Виберіть один з океанів\nщоб прочитаии детальну інформацію");
     }
@@ -168,6 +171,10 @@ public class Oceans extends javax.swing.JFrame {
 
     private void pacificOceanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pacificOceanActionPerformed
         // TODO add your handling code here:
+        content.append(_fileReaderService.getFile(_address + "Resources/Oceans/pacificOcean.txt"));
+        oceanName.setText("Тихий океан");
+        icon1.setIcon(new javax.swing.ImageIcon(_address + "Images/Oceans/pacificOcean1.jpeg"));
+        icon2.setIcon(new javax.swing.ImageIcon(_address + "Images/Oceans/pacificOcean2.jpg"));
     }//GEN-LAST:event_pacificOceanActionPerformed
 
     private void atlanticOceanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atlanticOceanActionPerformed
