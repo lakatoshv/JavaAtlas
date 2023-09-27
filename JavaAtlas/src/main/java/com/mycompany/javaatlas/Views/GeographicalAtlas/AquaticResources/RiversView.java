@@ -15,8 +15,12 @@ import com.mycompany.javaatlas.Views.GeographicalAtlas.AquaticResourcesView;
  */
 public class RiversView extends javax.swing.JFrame {
     
+    private String _address;
+    private FileReaderService _fileReaderService = new FileReaderService();
+ 
     /** Creates new form RiversView */
     public RiversView() {
+        _address = new MainForm().getAddress();
         initComponents();
     }
 
@@ -240,14 +244,17 @@ public class RiversView extends javax.swing.JFrame {
 
     private void riversInAustraliaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riversInAustraliaActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_riversInAustraliaActionPerformed
 
     private void riversInAfricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riversInAfricaActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_riversInAfricaActionPerformed
 
     private void riversInEurasiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riversInEurasiaActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_riversInEurasiaActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
@@ -259,6 +266,7 @@ public class RiversView extends javax.swing.JFrame {
 
     private void biggestRiversInUkraineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_biggestRiversInUkraineActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_biggestRiversInUkraineActionPerformed
 
     /**
