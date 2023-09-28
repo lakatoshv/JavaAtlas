@@ -62,4 +62,41 @@ public class RiversService {
         
         return result;
     }
+    
+    public RiversInfo GetRiversInNorthAmerica() {
+        var result = new RiversInfo();
+        result.SetRiversList(new Object [][] {
+            {"Місісіпі",  new Integer(3734), "США"},
+            {"Міссурі",  new Integer(3767), "США, Канада"},
+            {"Колумбія",  new Integer(2250), "Канада"},
+            {"Юкон",  new Integer(2897), "США, Канада"},
+            {"Річка Святого Лаврентія", null, "США, Канада"}
+        });
+        result.SetColumnNames(new String [] {
+            "Назва", "Довжина(загальна) (км.)", "Місце розташування"
+        });
+        
+        return result;
+    }
+    
+    public RiversInfo GetRiversInSouthAmerica() {
+        var result = new RiversInfo();
+        result.SetRiversList(new Object [][] {
+            {"Амазонка",  new Integer(6592), "Бразилія, Перу, Болівія, Колумбія, Еквадор"},
+            {"Парана",  new Integer(4380), "Бразилія, Парагвай, Апгентина"},
+            {"Жаруа",  new Integer(3280), "Бразилія"},
+            {"Мадейра",  new Integer(3200), "Болівія, Бразилія"},
+            {"Ориноко",  new Integer(2730), "Венесуела, Колумбія"},
+            {"Арагуая",  new Integer(2630), "Бразилія"},
+            {"Парагвай",  new Integer(2500), "Бразилія, Парагвай"},
+            {"Жапура",  new Integer(1930), "Колумбія"},
+            {"Апуре",  new Integer(1580), "Венесуела"},
+            {"Магдалена",  new Integer(1540), "Колумбія"}
+        });
+        result.SetColumnNames(new String [] {
+            "Назва", "Довжина(загальна) (км.)", "Місце розташування"
+        });
+        
+        return result;
+    }
 }
