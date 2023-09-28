@@ -41,4 +41,25 @@ public class RiversService {
         
         return result;
     }
+    
+    public RiversInfo GetDeepestRivers() {
+        var result = new RiversInfo();
+        result.SetRiversList(new Object [][] {
+            {"Конго",  new Integer(250), "Африка"},
+            {"Янцзи",  new Integer(200), "Китай"},
+            {"Дунай",  new Integer(178), "Європа"},
+            {"Замбезі",  new Integer(116), "Африка"},
+            {"Меконг",  new Integer(100), "Китай, Лаос, Тайланд, Камбоджа та В'єтнам"},
+            {"Амазонка",  new Integer(90), "Бразилія, Перу, Болівія, Колумбія, Еквадор"},
+            {"Жовта річка Хуанхе",  new Integer(80), "Китай"},
+            {"Гудзон",  new Integer(65), "США"},
+            {"Сент Лоуренс",  new Integer(65), "Канада"},
+            {"Місісіпі",  new Integer(60), null}
+        });
+        result.SetColumnNames(new String [] {
+            "Назва", "Найбільша глубина (м.)", "Місце знаходження"
+        });
+        
+        return result;
+    }
 }
