@@ -99,4 +99,20 @@ public class RiversService {
         
         return result;
     }
+    
+    public RiversInfo GetRiversInAustralia() {
+        var result = new RiversInfo();
+        result.SetRiversList(new Object [][] {
+            {"Дарлінг",  new Integer(2740), "Південно-східна частина Австралії"},
+            {"Муррей",  new Integer(2375), "Австралійські альпи"},
+            {"Бердекін",  new Integer(732), "Австралія"},
+            {"Фітройц",  new Integer(733), "Західна Австралія"},
+            {"Хантер",  new Integer(300), null}
+        });
+        result.SetColumnNames(new String [] {
+            "Назва", "Довжина(загальна) (км.)", "Місце розташування"
+        });
+        
+        return result;
+    }
 }
