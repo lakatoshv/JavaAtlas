@@ -309,7 +309,18 @@ public class RiversView extends javax.swing.JFrame {
 
     private void riversInAfricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riversInAfricaActionPerformed
         // TODO add your handling code here:
-        
+        var riversInfo = _riversService.GetRiversInAfrica();
+        table.setModel(new javax.swing.table.DefaultTableModel(
+            riversInfo.GetRiversList(),
+            riversInfo.GetColumnNames()
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class
+            };
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
     }//GEN-LAST:event_riversInAfricaActionPerformed
 
     private void riversInEurasiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riversInEurasiaActionPerformed
