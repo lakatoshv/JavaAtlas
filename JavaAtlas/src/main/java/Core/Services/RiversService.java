@@ -178,4 +178,35 @@ public class RiversService {
         
         return result;
     }
+    
+    public RiversInfo GetBiggestRiversInUkraine() {
+        var result = new RiversInfo();
+        result.SetRiversList(new Object [][] {
+            {"Дніпро",  new Integer(2201),  new Integer(981)},
+            {"Дністер",  new Integer(1362),  new Integer(705)},
+            {"Десна",  new Integer(1130),  new Integer(591)},
+            {"Сіверський Донець",  new Integer(1053),  new Integer(672)},
+            {"Західний Буг",  new Integer(831),  new Integer(401)},
+            {"Південний Буг",  new Integer(806),  new Integer(86)},
+            {"Псел",  new Integer(717),  new Integer(526)},
+            {"Гориць",  new Integer(659),  new Integer(577)},
+            {"Інгулець",  new Integer(549),  new Integer(549)},
+            {"Стир",  new Integer(494),  new Integer(445)},
+            {"Ворскла",  new Integer(464),  new Integer(348)},
+            {"Случ",  new Integer(451),  new Integer(451)},
+            {"Тетерів",  new Integer(385),  new Integer(385)},
+            {"Сула",  new Integer(365),  new Integer(365)},
+            {"Інгул",  new Integer(354),  new Integer(354)},
+            {"Рось",  new Integer(346),  new Integer(346)},
+            {"Оріль",  new Integer(346),  new Integer(346)},
+            {"Удай",  new Integer(327),  new Integer(327)},
+            {"Вовча",  new Integer(323),  new Integer(323)},
+            {"Самара",  new Integer(320), null}
+        });
+        result.SetColumnNames(new String [] {
+            "Назва", "Довжина(загальна) (км.)", "Довжина(в межах України) (км.)"
+        });
+        
+        return result;
+    }
 }
